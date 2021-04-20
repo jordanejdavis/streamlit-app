@@ -27,7 +27,6 @@ pipreqs==0.4.10
 protobuf==3.15.8
 pyarrow==3.0.0
 pydeck==0.6.1
-pywin32==227
 pywinpty==0.5.7
 PyYAML==5.4.1
 pyzmq==20.0.0
