@@ -17,7 +17,6 @@ colorama==0.4.4
 cycler==0.10.0
 decorator==5.0.5
 defusedxml==0.7.1
-docutils @ file:///D:/bld/docutils_1610127967785/work
 entrypoints==0.3
 et-xmlfile==1.0.1
 gitdb==4.0.7
@@ -34,11 +33,8 @@ jupyter-client==6.1.13
 jupyter-core==4.7.1
 jupyterlab-pygments==0.1.2
 jupyterlab-widgets==1.0.0
-Kivy @ file:///D:/bld/kivy_1608575442356/work
-kiwisolver @ file:///C:/ci/kiwisolver_1612282555033/work
 lxml==4.6.3
 MarkupSafe==1.1.1
-matplotlib @ file:///C:/ci/matplotlib-suite_1613408055530/work
 mistune==0.8.4
 mkl-fft==1.3.0
 mkl-random==1.0.2
@@ -50,23 +46,18 @@ nbformat==5.1.3
 nest-asyncio==1.5.1
 notebook==6.3.0
 numpy==1.20.2
-olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
 openpyxl==3.0.7
 packaging==20.9
 pandas==1.2.3
 pandocfilters==1.4.3
 parso==0.8.2
 pickleshare==0.7.5
-Pillow @ file:///D:/bld/pillow_1615244127530/work
 prometheus-client==0.10.0
 prompt-toolkit==3.0.18
 protobuf==3.15.7
 pycparser==2.20
 pydeck==0.6.1
-Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1615243893546/work
-pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
 pyrsistent==0.17.3
-python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
 pytz==2021.1
 pywin32==300
 pywinpty==0.5.7
@@ -75,14 +66,12 @@ pyzmq==22.0.3
 requests==2.25.1
 Send2Trash==1.5.0
 sip==4.19.13
-six @ file:///C:/ci/six_1605205404068/work
 smmap==4.0.0
 streamlit==0.79.0
 terminado==0.9.4
 testpath==0.4.4
 toml==0.10.2
 toolz==0.11.1
-tornado @ file:///C:/ci/tornado_1606924294691/work
 traitlets==5.0.5
 typing-extensions==3.7.4.3
 tzlocal==2.1
