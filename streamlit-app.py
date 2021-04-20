@@ -12,10 +12,10 @@ from PIL import Image
 
 st.set_page_config(layout="wide", page_title="Jordan Davis' Dashboard")
 image = Image.open("1200px-Flag_of_the_United_Kingdom.jpeg")
-if img.mode != 'RGB':
-    img = img.convert('RGB')
-st.image(image)
+if image.mode != 'RGB':
+    image = img.convert('RGB')
 st.header("""**Jordan's Data Visualisation Dashboard**""")
+st.image(image, width = 50)
 
 # Data preprocessing
 
