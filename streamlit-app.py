@@ -10,15 +10,15 @@ from bokeh.plotting import figure
 import math
 from PIL import Image
 
-st.set_page_config(layout="wide", page_title="CWH KPIs")
+st.set_page_config(layout="wide", page_title="Jordan Davis' Dashboard")
 image = Image.open(r"cwh.jpg")
 st.image(image, width=100)
-st.header("""**CWH Data Visualisation Dashboard**""")
+st.header("""**Jordan's Data Visualisation Dashboard**""")
 
 # Data preprocessing
 
 
-file = pd.ExcelFile(r"excel test.xlsx")
+file = pd.ExcelFile(r"excel test1.xlsx")
 df = pd.read_excel(file, "KPIs", index_col=0)  # index col set to the KPI column
 df.iloc[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
          16, 21, 25, 26, 27, 29, 30, 31, 32]] = df.iloc[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -102,12 +102,12 @@ for i in list(df.columns):
 # Sidebar and multiselect
 
 
-start = ["Consolidated Feb 2021", "Broome Feb 2021", "Cosmo Feb 2021", "Denham Feb 2021", "ESN Feb 2021",
-         "Harben Feb 2021", "HISN Feb 2021", "HIMSO Feb 2021", "Hunton Feb 2021", "Pendulum Feb 2021",
-         "Park Hall Feb 2021", "The Manor Feb 2021", "Whately Feb 2021"]  # This list used for the multiselect
+start = ["Consolidated Feb 2021", "Hotel A Feb 2021", "Hotel B Feb 2021", "Hotel C Feb 2021", "Hotel D Feb 2021",
+         "Hotel E Feb 2021", "Hotel F Feb 2021", "Hotel G Feb 2021", "Hotel H Feb 2021", "Hotel I Feb 2021",
+         "Hotel J Feb 2021", "Hotel K Feb 2021", "Hotel L Feb 2021"]  # This list used for the multiselect
 
-hotels = ["Consolidated", "Broome", "Cosmo", "Denham", "ESN", "Harben", "HISN", "HIMSO", "Hunton", "Pendulum",
-          "Park Hall", "The Manor", "Whately"]  # This list is used for the button loop
+hotels = ["Consolidated", "Hotel A", "Hotel B", "Hotel C", "Hotel D", "Hotel E", "Hotel F", "Hotel G", "Hotel H", "Hotel I",
+          "Hotel J", "Hotel K", "Hotel L"]  # This list is used for the button loop
 
 st.sidebar.write("""**Hotel and month selector:**""")
 options = st.sidebar.multiselect("", options=l, default=start)
