@@ -11,8 +11,6 @@ import math
 from PIL import Image
 
 st.set_page_config(layout="wide", page_title="Jordan Davis' Dashboard")
-image = Image.open(r"cwh.jpg")
-st.image(image, width=100)
 st.header("""**Jordan's Data Visualisation Dashboard**""")
 
 # Data preprocessing
