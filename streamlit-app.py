@@ -70,35 +70,20 @@ l = list(df.columns)
 l.append("All Data in Existence")
 
 # Going through the df columns and adding them to a list if the column label contains the desired month
-dec2019 = []
-for i in list(df.columns):
-    if "Dec 2019" in i:
-        dec2019.append(i)
+month_list = ["Jan", "Feb", "March", "April", "May", "June",
+              "July", "August", "Sept", "Oct", "Nov", "Dec"]
+year_list = [2019, 2020, 2021]
+month_dict = {}
+for j in year_list:
+    for i in month_list:
+        month_dict[i+" "+str(j)] = []
 
-jan2020 = []
-for i in list(df.columns):
-    if "Jan 2020" in i:
-        jan2020.append(i)
-
-feb2020 = []
-for i in list(df.columns):
-    if "Feb 2020" in i:
-        feb2020.append(i)
-
-dec2020 = []
-for i in list(df.columns):
-    if "Dec 2020" in i:
-        dec2020.append(i)
-
-feb2021 = []
-for i in list(df.columns):
-    if "Feb 2021" in i:
-        feb2021.append(i)
-
-jan2021 = []
-for i in list(df.columns):
-    if "Jan 2021" in i:
-        jan2021.append(i)
+for i in month_dict:
+    for j in list(df.columns):
+        if i in j:
+            month_dict[i].append(j)
+months = list(month_dict.keys())
+months.insert(0, "OFF")
 
 
 # Sidebar and multiselect
@@ -137,23 +122,14 @@ for j in hotels:
 
 # Month slider
 st.sidebar.write("""**Month Override:**""")
-month = st.sidebar.select_slider("", ["OFF", "Dec 2019", "Jan 2020", "Feb 2020", "Dec 2020",
-                                        "Jan 2021", "Feb 2021"])
+month = st.sidebar.select_slider("", months)
 st.sidebar.write(r"Note this needs to be set to 'OFF' to unlock other interactive features")
 if month != "OFF":
     options.clear()
-if month == "Dec 2019":
-    options = dec2019
-elif month == "Jan 2020":
-    options = jan2020
-elif month == "Feb 2020":
-    options = feb2020
-elif month == "Dec 2020":
-    options = dec2020
-elif month == "Jan 2021":
-    options = jan2021
-elif month == "Feb 2021":
-    options = feb2021
+
+for i in month_dict.keys():
+    if month == i:
+        options = month_dict[i]
 
 
 # Calling graph function
