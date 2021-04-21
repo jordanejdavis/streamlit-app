@@ -90,9 +90,7 @@ months.insert(0, "OFF")
 # Sidebar and multiselect
 
 
-start = ["Consolidated Feb 2021", "Hotel A Feb 2021", "Hotel B Feb 2021", "Hotel C Feb 2021", "Hotel D Feb 2021",
-         "Hotel E Feb 2021", "Hotel F Feb 2021", "Hotel G Feb 2021", "Hotel H Feb 2021", "Hotel I Feb 2021",
-         "Hotel J Feb 2021", "Hotel K Feb 2021", "Hotel L Feb 2021"]  # This list used for the multiselect
+start = month_dict["March 2021"]  # This list used for the multiselect
 
 hotels = ["Consolidated", "Hotel A", "Hotel B", "Hotel C", "Hotel D", "Hotel E", "Hotel F", "Hotel G", "Hotel H", "Hotel I",
           "Hotel J", "Hotel K", "Hotel L"]  # This list is used for the button loop
