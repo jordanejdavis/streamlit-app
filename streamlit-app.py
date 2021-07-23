@@ -189,3 +189,5 @@ def start():
 
                  graph2()
                  st.dataframe(df_reduced.style.format("£{:,.2f}"))
+                  
+start()
