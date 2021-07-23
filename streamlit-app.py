@@ -15,7 +15,7 @@ def start():
     my_page = st.sidebar.radio('Page Navigation', ['P&L KPIs', 'Forecast'])
     
     if my_page == "P&L KPIs":
-        st.title("KPIs")
+        st.title("KPIs example. Randomly generated data")
 
         # Data preprocessing
 
