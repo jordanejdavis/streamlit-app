@@ -127,7 +127,7 @@ def start():
         # Calling graph function
 
         graph()
-        data()
+
 
 
 
