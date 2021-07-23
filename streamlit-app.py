@@ -75,19 +75,6 @@ def start():
             p.xaxis.major_label_orientation = math.pi / 2.8
             return st.bokeh_chart(p, use_container_width=True)
 
-
-        def data():
-            data_to_table = df.loc[options2][options]  # df.loc[rows][columns]
-            if options2 == "Housekeeping payroll (per room sold)" or options2 == "ADR" or options2 == "RevPAR" or \
-                    options2 == "Laundry cost (per room sold)" or options2 == "Accommodation payroll (per room sold)" or \
-                    options2 == "Utilities cost (per room sold)" or options2 == "C/C commission (per room sold)" or \
-                    options2 == "Average F&B spend (per room sold)":
-                return st.dataframe(data_to_table.to_frame().style.format("£{:.2f}"))
-            else:
-                return st.dataframe(data_to_table.to_frame().style.format("{:.2f}%"))
-
-
-
         # Going through the df columns and adding them to a dict of lists if the column label contains the desired month
         month_list = ["Jan", "Feb", "March", "April", "May", "June",
                       "July", "August", "Sept", "Oct", "Nov", "Dec"]
