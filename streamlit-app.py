@@ -7,19 +7,15 @@ from bokeh.transform import factor_cmap
 import math
 from PIL import Image
 
-image = Image.open(r"cwh.jpg")
-st.set_page_config(layout="wide", page_title="CWH Dashboard", page_icon=image)
-with st.sidebar.beta_expander(label="Welcome", expanded=False):
-    password = st.text_input(label="Enter password: ", type="password")
 
+st.set_page_config(layout="wide", page_title="CWH Dashboard")
 
 
 def start():
-    st.image(image, width=100)
     my_page = st.sidebar.radio('Page Navigation', ['P&L KPIs', 'Forecast'])
     
     if my_page == "P&L KPIs":
-        st.title("CWH KPIs")
+        st.title("KPIs")
 
         # Data preprocessing
 
@@ -154,7 +150,7 @@ def start():
     #################################################################################################################
     # NEXT PAGE
     else:
-        st.title("CWH Forecast")
+        st.title("Forecast example. Randomly generated data")
         df = pd.read_csv(r"bokeh_fc.csv", index_col=0, na_values="-")
         hotel_list = ["Consolidated", "Broome", "Chicheley", "Cosmo", "Denham", "ESN", "Harben", "HIMSO", "HISN",
                    "Hunton", "Manor", "Pendulum", "Park Hall", "Warwick", "Whately"]
