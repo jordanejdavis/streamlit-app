@@ -8,7 +8,7 @@ import math
 from PIL import Image
 
 
-st.set_page_config(layout="wide", page_title="CWH Dashboard")
+st.set_page_config(layout="wide", page_title="Jordan's data dashboard")
 
 
 def start():
